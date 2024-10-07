@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: black;
+            color: white;
+        }
+
+        /* Navbar styles */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #333;
+            padding: 8px 20px;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-links li {
+            margin-right: 20px;
+            position: relative;
+        }
+
+        .nav-links li a {
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+            padding: 8px 15px;
+            transition: background-color 0.3s;
+        }
+
+        .nav-links li a:hover {
+            background-color: #575757;
+            border-radius: 5px;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #333;
+            min-width: 150px;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            padding: 10px 15px;
+            display: block;
+            color: white;
+            text-decoration: none;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #575757;
+        }
+
+        .nav-links li:hover .dropdown-content {
+            display: block;
+        }
+
+        .login {
+            margin-left: auto;
+        }
+
+        .login a {
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+            padding: 8px 15px;
+            background-color: #28a745;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .login a:hover {
+            background-color: #218838;
+        }
+
+        /* Carousel styles */
+        .carousel-inner img {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+        }
+
+        .carousel {
+            margin-top: 20px;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr); /* Set 5 items per row */
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .grid-item {
+            background-color: #444;
+            border-radius: 10px;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .grid-item img {
+            width: 100%;
+            height: 250px; /* Set fixed height */
+            object-fit: cover; /* Maintain aspect ratio */
+            border-radius: 10px;
+        }
+
+        .quantity-controls {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 10px 0;
+        }
+
+        .quantity-controls button {
+            background-color: #28a745;
+            border: none;
+            color: white;
+            padding: 5px 10px;
+            margin: 0 5px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .quantity-controls input {
+            width: 40px;
+            text-align: center;
+            border: none;
+            border-radius: 5px;
+        }
+
+        /* Footer styles */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav>
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="AboutUs.html">About Us</a></li>
+            <li><a href="contactUs.html">Contact Us</a></li>
+            <li>
+                <a href="#">Categories</a>
+                <ul class="dropdown-content">
+                    <li><a href="#">Toys</a></li>
+                    <li><a href="#">Wood Work</a></li>
+                    <li><a href="#">Clothing</a></li>
+                </ul>
+            </li>
+        </ul>
+
+        <div class="login">
+            <a href="Login.html">Login</a>
+        </div>
+    </nav>
+
+    <!-- Carousel -->
+    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="https://png.pngtree.com/background/20230613/original/pngtree-the-lokoman-people-are-indigenous-people-picture-image_3401458.jpg" class="d-block w-100" alt="Image 1">
+            </div>
+            <div class="carousel-item">
+                <img src="https://static.vecteezy.com/system/resources/thumbnails/046/817/005/small_2x/view-of-a-group-of-inland-tribal-men-practicing-war-with-a-beautiful-forest-free-photo.jpg" class="d-block w-100" alt="Image 2">
+            </div>
+            <div class="carousel-item">
+                <img src="https://static.vecteezy.com/system/resources/thumbnails/046/257/264/small_2x/view-of-a-group-of-inland-tribal-men-practicing-war-with-a-beautiful-forest-free-photo.jpg" class="d-block w-100" alt="Image 3">
+            </div>
+            <div class="carousel-item">
+                <img src="https://img.indiahandmade.com/catalog/product/cache/ffd74bda99b48b5fc1e6ab593972ce80/w/h/whatsapp_image_2023-07-18_at_11.35.21_am_2.jpeg" alt="Image 4">
+            </div>
+        </div>
+    </div>
+    <center><h3>Popular items</h3></center>
+
+    <!-- Grid of popular items -->
+    <div class="grid-container">
+        <div class="grid-item">
+            <img src="https://www.jiomart.com/images/product/original/rvyuzgkdz1/adilakshmi-toys-kondapalli-handicraft-dancing-doll-15-inch-orange-and-green-product-images-orvyuzgkdz1-p598946067-0-202303011341.jpg?im=Resize=(1000,1000)" alt="item1">
+            <h4>Item 1</h4>
+            <p>Price: 180.00</p>
+            <div class="quantity-controls">
+                <button class="decrease">-</button>
+                <input type="text" value="1" readonly>
+                <button class="increase">+</button>
+            </div>
+            
+            <button class="btn btn-success add-to-cart" 
+        data-name="Item 1" 
+        data-price="180.00">Add to Cart</button>
+
+        </div>
+        <div class="grid-item">
+            <img src="https://lakshmisharath.com/wp-content/uploads/2022/09/Kondapalli-wooden-toys.jpeg" alt="Item 2">
+            <h4>Item 2</h4>
+            <p>Price: 200</p>
+            <div class="quantity-controls">
+                <button class="decrease">-</button>
+                <input type="text" value="1" readonly>
+                <button class="increase">+</button>
+            </div>
+            <button class="btn btn-success add-to-cart" 
+        data-name="Item 2" 
+        data-price="200.00">Add to Cart</button>
+        </div>
+        <div class="grid-item">
+            <img src="https://live.staticflickr.com/3634/3404488827_c924da94aa_b.jpg" alt="Item 3">
+            <h4>Item 3</h4>
+            <p>Price: 150.00</p>
+            <div class="quantity-controls">
+                <button class="decrease">-</button>
+                <input type="text" value="1" readonly>
+                <button class="increase">+</button>
+            </div>
+            <button class="btn btn-success add-to-cart" 
+        data-name="Item 3" 
+        data-price="150.00">Add to Cart</button>
+        </div>
+        <div class="grid-item">
+            <img src="https://images.meesho.com/images/products/94340258/vkzfm_512.webp" alt="Item 4">
+            <h4>Item 4</h4>
+            <p>Price: 225.00</p>
+            <div class="quantity-controls">
+                <button class="decrease">-</button>
+                <input type="text" value="1" readonly>
+                <button class="increase">+</button>
+            </div>
+            <button class="btn btn-success add-to-cart" 
+        data-name="Item 4" 
+        data-price="225.00">Add to Cart</button>
+        </div>
+        <div class="grid-item">
+            <img src="https://lsmedia.linker-cdn.net/282256/2021/7131321.jpeg?width=1200&height=1125" alt="Item 5">
+            <h4>Item 5</h4>
+            <p>Price: 230.00</p>
+            <div class="quantity-controls">
+                <button class="decrease">-</button>
+                <input type="text" value="1" readonly>
+                <button class="increase">+</button>
+            </div>
+            <button class="btn btn-success add-to-cart" 
+        data-name="Item 5" 
+        data-price="230.00">Add to Cart</button>
+        </div>
+        <div class="grid-item">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmmb8r5A4i2fhABF1FTwVw5wbh9BIt9-QUfA&s" alt="Item6">
+            <h4>Item 6</h4>
+            <p>Price: 380.00</p>
+            <div class="quantity-controls">
+                <button class="decrease">-</button>
+                <input type="text" value="1" readonly>
+                <button class="increase">+</button>
+            </div>
+            <button class="btn btn-success add-to-cart" 
+        data-name="Item 6" 
+        data-price="380.00">Add to Cart</button>
+        </div>
+        <div class="grid-item">
+            <img src="https://www.toptourist.com/wp-content/uploads/2015/08/handi-1920x900.jpg" alt="Item 7">
+            <h4>Item 7</h4>
+            <p>Price: 215.00</p>
+            <div class="quantity-controls">
+                <button class="decrease">-</button>
+                <input type="text" value="1" readonly>
+                <button class="increase">+</button>
+            </div>
+            <button class="btn btn-success add-to-cart" 
+        data-name="Item 7" 
+        data-price="215.00">Add to Cart</button>
+        </div>
+        <div class="grid-item">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZnxMdYLCmc9zafc3M84SRE8i_vxRDOKV1jQ&s" alt="Item 8">
+            <h4>Item 8</h4>
+            <p>Price: 420.00</p>
+            <div class="quantity-controls">
+                <button class="decrease">-</button>
+                <input type="text" value="1" readonly>
+                <button class="increase">+</button>
+            </div>
+            <button class="btn btn-success add-to-cart" 
+        data-name="Item 8" 
+        data-price="420.00">Add to Cart</button>
+        </div>
+        <div class="grid-item">
+            <img src="https://www.tribesindia.com/wp-content/uploads/2023/12/1TGADCTRJ04100-1-300x300.jpg" alt="Item 9">
+            <h4>Item 9</h4>
+            <p>Price: 525.00</p>
+            <div class="quantity-controls">
+                <button class="decrease">-</button>
+                <input type="text" value="1" readonly>
+                <button class="increase">+</button>
+            </div>
+            <button class="btn btn-success add-to-cart" 
+        data-name="Item 9" 
+        data-price="525.00">Add to Cart</button>
+        </div>
+        <div class="grid-item">
+            <img src="https://www.giheritage.com/uploads/product/tribal-family-under-a-tree-h.jpg" alt="Item 10">
+            <h4>Item 10</h4>
+            <p>Price: 230.00</p>
+            <div class="quantity-controls">
+                <button class="decrease">-</button>
+                <input type="text" value="1" readonly>
+                <button class="increase">+</button>
+            </div>
+            <button class="btn btn-success add-to-cart" 
+        data-name="Item 10" 
+        data-price="230.00">Add to Cart</button>
+        </div>
+    </div>
+    
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Your Company Name. All rights reserved.</p>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Functionality for increasing and decreasing quantity
+        document.querySelectorAll('.grid-item').forEach(item => {
+            const quantityInput = item.querySelector('input[type="text"]');
+            const increaseButton = item.querySelector('.increase');
+            const decreaseButton = item.querySelector('.decrease');
+
+            increaseButton.addEventListener('click', () => {
+                quantityInput.value = parseInt(quantityInput.value) + 1;
+            });
+
+            decreaseButton.addEventListener('click', () => {
+                if (quantityInput.value > 1) {
+                    quantityInput.value = parseInt(quantityInput.value) - 1;
+                }
+            });
+        });
+
+         // Functionality for adding to cart
+         document.querySelectorAll('.add-to-cart').forEach(button => {
+            button.addEventListener('click', () => {
+                const itemName = button.getAttribute('data-name');
+                const itemPrice = parseFloat(button.getAttribute('data-price'));
+                const quantityInput = button.closest('.grid-item').querySelector('input[type="text"]');
+                const quantity = parseInt(quantityInput.value);
+                
+                // Calculate total amount
+                const totalAmount = (itemPrice * quantity).toFixed(2);
+                
+                // Redirect to Add to Cart page with item details
+                window.location.href = `addtocart.html?name=${encodeURIComponent(itemName)}&quantity=${quantity}&total=${totalAmount}`;
+            });
+        });
+    </script>
+</body>
+</html>

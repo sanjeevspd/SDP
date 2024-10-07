@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Start Button Page</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: url('landing.jpg') no-repeat center center fixed; /* Add your photo path */
+            background-size: cover;
+            height: 100vh;
+            position: relative;
+        }
+
+        .container {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+        }
+
+        .start-btn {
+            padding: 15px 30px;
+            font-size: 20px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .start-btn:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <button class="start-btn" onclick="startFunction()">Start</button>
+    </div>
+
+    <script>
+        function startFunction() {
+            window.location.href = 'HomePage.html'; // Redirects to your homepage
+        }
+    </script>
+</body>
+</html>
